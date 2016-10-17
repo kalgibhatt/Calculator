@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Calculator</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<!-- Loading the AngularJS file from /public/angularJS folder -->
+	<script src="angularjs/calculator.js"></script>
+  </head>
+  <body ng-app="calculator" ng-controller="calculate" class="body">
+  	<div class="container-fluid">
+	  	<div class="row">
+		  	<div class="col-xs-12 heading">Calculator App</div>
+		    <div class="col-xs-12 title">A Simple Calculator performing Addition, Subtraction, Multiplication and Division</div>
+	    </div>
+	    <div class="row">
+		    <div>
+			  	<div class="calculate spacer">
+			  		<div style="float:left">
+			  			<input type = "text" placeholder="0" ng-model="result" autofocus="autofocus" max-width="5" input-pattern class="result" id="result">
+			  			<a ng-click="resetDisplay()" class="cbutton">C</a>
+			  		</div>
+			  		<div>
+			  			<button class="button" ng-click="display(1)">1</button>
+			  			<button class="button" ng-click="display(2)">2</button>
+			  			<button class="button" ng-click="display(3)">3</button>
+			  			<button class="button" ng-click="display('÷')">&divide;</button>
+			  		</div>
+			  		<div>
+			  			<button class="button" ng-click="display(4)">4</button>
+			  			<button class="button" ng-click="display(5)">5</button>
+			  			<button class="button" ng-click="display(6)">6</button>
+			  			<button class="button" ng-click="display('×')">&times;</button>
+			  		</div>
+			  		<div>
+			  			<button class="button" ng-click="display(7)">7</button>
+			  			<button class="button" ng-click="display(8)">8</button>
+			  			<button class="button" ng-click="display(9)">9</button>
+			  			<button class="button" ng-click="display('-')">-</button>
+			  		</div>
+			  		<div>
+			  			<button class="button" ng-click="display(0)">0</button>
+			  			<button class="button" ng-click="display('.')">.</button>
+			  			<button id="submit" class="button" ng-click="calculate()">=</button>
+			  			<button class="button" ng-click="display('+')">+</button> 			
+			  		</div>
+				</div> 			
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

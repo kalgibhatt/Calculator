@@ -14,7 +14,6 @@
     "ejs": "~2.4.1",
     "express": "~4.13.4",
     "jquery": "^3.1.1",
-    "jquery-ui": "file://node_modules/jquery-ui",
     "morgan": "~1.7.0",
     "nodemon": "*",
     "serve-favicon": "~2.3.0"

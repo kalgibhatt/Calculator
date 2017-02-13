@@ -16,8 +16,10 @@ calculator.controller('calculate', function($scope, $http) {
 				"val2" : val2,
 				"operator" : operator
 			}
-		}).success(function(data) {
-			$scope.result = data.result;
+		}).then(function(data) {
+			$scope.result = data.data.result;
+		}, function(error) {
+			// TODO: Handle Error
 		});
 	};
 	
